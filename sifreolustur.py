@@ -3,9 +3,9 @@ import random
 def sifre_olustur(uzunluk, sayi_iste, sembol_iste):
   """Belirtilen uzunlukta ve seçilen kriterlere göre rastgele bir şifre oluşturur."""
   kucuk_harfler = "abcdefghijklmnopqrstuvwxyz"
-  buyuk_harfler = kucuk_harfler.upper()
+  buyuk_harfler = "kucuk_harfler.upper()"
   rakamlar = "0123456789"
-  semboller = "!@#$%^&*"
+  semboller = "!@#$%^&*_-|"
 
   karakterler = kucuk_harfler + buyuk_harfler
 
@@ -25,8 +25,8 @@ def sifre_olustur(uzunluk, sayi_iste, sembol_iste):
 print("Parola Oluşturucuya Hoş Geldiniz")
 print("Parolanız küçük, büyük karakterler, sayı ve sembollerden oluşturulacaktır.")
 sifre_uzunlugu = int(input("Parola için bir karakter sayısı belirtin: "))
-sayi_iste = input("Şifrede sayı içersin mi? (evet/hayır) ").lower() == "evet"
-sembol_iste = input("Şifrede sembol içersin mi? (evet/hayır) ").lower() == "evet"
+sayi_iste = input("Şifrede sayı içersin mi? (E/H) ").lower() == "e"
+sembol_iste = input("Şifrede sembol içersin mi? (E/H) ").lower() == "e"
 
 # Oluşturulan şifreyi ekrana yazdırın
 olusturulan_sifre = sifre_olustur(sifre_uzunlugu, sayi_iste, sembol_iste)
